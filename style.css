@@ -1,55 +1,36 @@
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(17, 152, 236);
-  
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+background-color: rgb(191, 226, 226);
 }
-.card{
-    position: relative;
-    width: 300px;
-    height: 150px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px black;
-    background-color: aliceblue;
-    transition: 0.3s;
-    padding: 20px 30px;
-    cursor: pointer;
+main{
+    width: 75%;
+    margin: 50px auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 70px 100px 200px 70px;
+    grid-template-columns: repeat(3,1fr) 150px;
+    color: white;
+    grid-gap: 20px;
+    padding: 20px 20px 20px 20px;
+}
+.header{ background-color: rgb(144, 18, 18);
+    grid-column:1/-1 ;
+}
+.box1{ background-color:blueviolet}
 
-}
-.card:hover{
-    height: 320px;
-}
-.imgbox{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    transform: translateY(-80px);
-    z-index: 99;
-    
-}
-img{
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px black;
-}
-#content{
-    padding: 10px 20px;
-    text-align: center;
-    transform: translateY(-180px);
-    opacity: 0;
-    transition: 00.3s;
-    
-    
-}
+.box2{ background-color: pink;}
 
-.card:hover #content{
-    transform: translateY(-20px);
-    opacity: 2;
+.box3{ background-color: rgb(198, 78, 34);}
 
+.sidebar{ background-color: green;
+    grid-row: 2/ span 2;
+    grid-column: 4/5;
 }
-#content h2{
-    color: rgb(17, 152, 236);
+.content{ background-color: lightcoral;
+grid-column: 1/ span 3;
+}
+.footer{ background-color: rgb(9, 39, 43);
+    grid-column: 1/-1 ;
 }
